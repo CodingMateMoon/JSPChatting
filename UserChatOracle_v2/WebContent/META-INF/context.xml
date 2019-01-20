@@ -1,0 +1,17 @@
+<Context path="/UserChat" docBase="www">
+<Resource
+	name="jdbc/UserChat"
+	auth="Container"
+	type="javax.sql.DataSource"
+	driverClassName="oracle.jdbc.driver.OracleDriver"
+	loginTimeout="10"
+	validationQuery = "SELECT 1 FROM DUAL"
+	maxWait="5000"
+	username="chat"
+	password="1234"
+	testOnBorrow="true"
+	url="jdbc:oracle:thin:@127.0.0.1:1521:XE"/>
+<ResourceLink type="javax.sql.data.DataSource"
+	name="jdbc/UserChat"
+	global="jdbc/UserChat"/>
+</Context>
