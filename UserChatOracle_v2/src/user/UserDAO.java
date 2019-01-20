@@ -57,6 +57,8 @@ public class UserDAO {
 			}
 		}
 		return -1; // 데이터베이스 오류
+		
+		
 	}
 
 	public int registerCheck(String userID) {
