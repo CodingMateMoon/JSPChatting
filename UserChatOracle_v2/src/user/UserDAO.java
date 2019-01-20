@@ -1,3 +1,4 @@
+
 package user;
 
 import java.sql.Connection;
@@ -27,7 +28,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM USER WHERE userID = ?";
+		String sql = "SELECT * FROM USERCHAT WHERE userID = ?";
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -56,6 +57,7 @@ public class UserDAO {
 				e.printStackTrace();
 			}
 		}
+		
 		return -1; // 데이터베이스 오류
 	}
 
@@ -63,7 +65,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM USER WHERE userID = ?";
+		String sql = "SELECT * FROM USERCHAT WHERE userID = ?";
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -89,6 +91,7 @@ public class UserDAO {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("registerCheckError");
 		return -1; // 데이터베이스 오류
 	}
 
@@ -97,7 +100,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		System.out.println("register() 호출");
-		String sql = "INSERT INTO USER VALUES(?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO USERCHAT VALUES(?, ?, ?, ?, ?, ?, ?)";
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
