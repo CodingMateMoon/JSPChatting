@@ -27,7 +27,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM USER WHERE userID = ?";
+		String sql = "SELECT * FROM USERCHAT WHERE userID = ?";
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -64,7 +64,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM USER WHERE userID = ?";
+		String sql = "SELECT * FROM USERCHAT WHERE userID = ?";
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
