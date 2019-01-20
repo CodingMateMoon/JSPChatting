@@ -97,7 +97,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		System.out.println("register() 호출");
-		String sql = "INSERT INTO USERCHAT VALUES(?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO USER VALUES(?, ?, ?, ?, ?, ?, ?)";
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);

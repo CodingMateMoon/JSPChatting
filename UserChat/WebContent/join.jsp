@@ -158,19 +158,22 @@
 	</div>
 	<%
 		String messageContent = null;
+		System.out.println("------messageContent-----");
 		if (session.getAttribute("messageContent") != null) {
 			messageContent = (String) session.getAttribute("messageContent");
+			System.out.println(messageContent);
 		}
 		String messageType = null;
 		if (session.getAttribute("messageType") != null) {
-			messageContent = (String) session.getAttribute("messageType");
+			messageType = (String) session.getAttribute("messageType");
+			System.out.println(messageType);
 		}
 		if (messageContent != null) {
 	%>
-	<div class="modal fade" id="massageModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="vertical-alignment-helper">
 			<div class="modal-dialog vertical-align-center">
-				<div class="modal-content <%if (messageType.equals("오류메시지")) out.println("panel-warning"); else out.println("panel-success");%>">
+				<div class="modal-content <%if(messageType.equals("오류메시지")) out.println("panel-warning"); else out.println("panel-success");%>">
 				<!-- <div class="modal-content"> -->
 					<div class="modal-header panel-heading">
 						<button type="button" class="close" data-dismiss="modal">
