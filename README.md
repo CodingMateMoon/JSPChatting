@@ -1,2 +1,2 @@
 # JSPChatting
-JSPChatting
+JSPChatting Program
