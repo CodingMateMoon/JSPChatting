@@ -56,6 +56,7 @@ public class UserDAO {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("DataBase Error");
 		return -1; // 데이터베이스 오류
 	}
 
